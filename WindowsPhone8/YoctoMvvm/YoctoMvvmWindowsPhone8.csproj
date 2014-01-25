@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5ECD2FDE-CA37-4FD8-BC9F-49AE3D4F90E2}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YoctoMvvm</RootNamespace>
+    <AssemblyName>YoctoMvvm</AssemblyName>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|ARM' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\ARM\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|ARM' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\ARM\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Portable\YoctoMvvmWindowsPhone\Common\IoCWP.cs">
+      <Link>Common\IoCWP.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvmWindowsPhone\Platform\Dispatcher.cs">
+      <Link>Platform\Dispatcher.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Commands\AsyncYoctoCommand.cs">
+      <Link>Commands\AsyncYoctoCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Commands\CancelYoctoCommandEventArgs.cs">
+      <Link>Commands\CancelYoctoCommandEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Commands\YoctoCommand.cs">
+      <Link>Commands\YoctoCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Commands\YoctoCommandEventArgs.cs">
+      <Link>Commands\YoctoCommandEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Common\Bindable.cs">
+      <Link>Common\Bindable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Common\IoC.cs">
+      <Link>Common\IoC.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Common\Messenger.cs">
+      <Link>Common\Messenger.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Common\ViewModel.cs">
+      <Link>Common\ViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Courier\Courier.cs">
+      <Link>Courier\Courier.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Courier\Parcel.cs">
+      <Link>Courier\Parcel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Courier\ParcelsRouter.cs">
+      <Link>Courier\ParcelsRouter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Courier\ParcelTypeSubscription.cs">
+      <Link>Courier\ParcelTypeSubscription.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Courier\ParcelTypeSubscriptionVoucher.cs">
+      <Link>Courier\ParcelTypeSubscriptionVoucher.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Platform\IAppSettingsProvider.cs">
+      <Link>Platform\IAppSettingsProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Platform\IDispatcher.cs">
+      <Link>Platform\IDispatcher.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Platform\INavigationService.cs">
+      <Link>Platform\INavigationService.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <ProjectExtensions />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

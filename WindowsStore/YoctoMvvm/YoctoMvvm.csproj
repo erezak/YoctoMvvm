@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3A019A2E-28B6-4EA0-A7B8-9F51FBBA1C7A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YoctoMvvm</RootNamespace>
+    <AssemblyName>YoctoMvvm</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+    <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Portable\YoctoMvvmWindowsStore\Common\IocWindowsStore.cs">
+      <Link>Common\IocWindowsStore.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvmWindowsStore\Platform\DispatcherWindowsStore.cs">
+      <Link>Platform\DispatcherWindowsStore.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Commands\AsyncYoctoCommand.cs">
+      <Link>Commands\AsyncYoctoCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Commands\CancelYoctoCommandEventArgs.cs">
+      <Link>Commands\CancelYoctoCommandEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Commands\YoctoCommand.cs">
+      <Link>Commands\YoctoCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Commands\YoctoCommandEventArgs.cs">
+      <Link>Commands\YoctoCommandEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Common\Bindable.cs">
+      <Link>Common\Bindable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Common\IoC.cs">
+      <Link>Common\IoC.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Common\Messenger.cs">
+      <Link>Common\Messenger.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Common\ViewModel.cs">
+      <Link>Common\ViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Courier\Courier.cs">
+      <Link>Courier\Courier.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Courier\Parcel.cs">
+      <Link>Courier\Parcel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Courier\ParcelsRouter.cs">
+      <Link>Courier\ParcelsRouter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Courier\ParcelTypeSubscription.cs">
+      <Link>Courier\ParcelTypeSubscription.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Courier\ParcelTypeSubscriptionVoucher.cs">
+      <Link>Courier\ParcelTypeSubscriptionVoucher.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Platform\IAppSettingsProvider.cs">
+      <Link>Platform\IAppSettingsProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Platform\IDispatcher.cs">
+      <Link>Platform\IDispatcher.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Platform\INavigationService.cs">
+      <Link>Platform\INavigationService.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
+    <VisualStudioVersion>12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

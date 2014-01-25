@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FD44BD1A-5608-4E51-B8F0-6E4C387E4DA7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YoctoMvvm</RootNamespace>
+    <AssemblyName>YoctoMvvm</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Portable\YoctoMvvmWpf\Common\IocWpf.cs">
+      <Link>Common\IocWpf.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvmWpf\Platform\Dispatcher.cs">
+      <Link>Platform\Dispatcher.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Commands\AsyncYoctoCommand.cs">
+      <Link>Commands\AsyncYoctoCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Commands\CancelYoctoCommandEventArgs.cs">
+      <Link>Commands\CancelYoctoCommandEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Commands\YoctoCommand.cs">
+      <Link>Commands\YoctoCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Commands\YoctoCommandEventArgs.cs">
+      <Link>Commands\YoctoCommandEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Common\Bindable.cs">
+      <Link>Common\Bindable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Common\IoC.cs">
+      <Link>Common\IoC.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Common\Messenger.cs">
+      <Link>Common\Messenger.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Common\ViewModel.cs">
+      <Link>Common\ViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Courier\Courier.cs">
+      <Link>Courier\Courier.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Courier\Parcel.cs">
+      <Link>Courier\Parcel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Courier\ParcelsRouter.cs">
+      <Link>Courier\ParcelsRouter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Courier\ParcelTypeSubscription.cs">
+      <Link>Courier\ParcelTypeSubscription.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Courier\ParcelTypeSubscriptionVoucher.cs">
+      <Link>Courier\ParcelTypeSubscriptionVoucher.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Platform\IAppSettingsProvider.cs">
+      <Link>Platform\IAppSettingsProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Platform\IDispatcher.cs">
+      <Link>Platform\IDispatcher.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Platform\INavigationService.cs">
+      <Link>Platform\INavigationService.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
