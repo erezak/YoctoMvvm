@@ -89,6 +89,12 @@
     <Compile Include="..\..\Portable\YoctoMvvmWindowsPhone\Platform\Dispatcher.cs">
       <Link>Platform\Dispatcher.cs</Link>
     </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvmWindowsPhone\Platform\INavigationMappingProvider.cs">
+      <Link>Platform\INavigationMappingProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvmWindowsPhone\Platform\NavigationServiceWindowsPhone.cs">
+      <Link>Platform\NavigationServiceWindowsPhone.cs</Link>
+    </Compile>
     <Compile Include="..\..\Portable\YoctoMvvm\Commands\AsyncYoctoCommand.cs">
       <Link>Commands\AsyncYoctoCommand.cs</Link>
     </Compile>
@@ -109,6 +115,9 @@
     </Compile>
     <Compile Include="..\..\Portable\YoctoMvvm\Common\Messenger.cs">
       <Link>Common\Messenger.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Common\Parser.cs">
+      <Link>Common\Parser.cs</Link>
     </Compile>
     <Compile Include="..\..\Portable\YoctoMvvm\Common\ViewModel.cs">
       <Link>Common\ViewModel.cs</Link>

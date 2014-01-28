@@ -33,6 +33,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -68,6 +69,9 @@
     </Compile>
     <Compile Include="..\..\Portable\YoctoMvvm\Common\Messenger.cs">
       <Link>Common\Messenger.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Common\Parser.cs">
+      <Link>Common\Parser.cs</Link>
     </Compile>
     <Compile Include="..\..\Portable\YoctoMvvm\Common\ViewModel.cs">
       <Link>Common\ViewModel.cs</Link>

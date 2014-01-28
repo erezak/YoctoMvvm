@@ -113,6 +113,12 @@
     <Compile Include="..\..\Portable\YoctoMvvmWindowsStore\Platform\DispatcherWindowsStore.cs">
       <Link>Platform\DispatcherWindowsStore.cs</Link>
     </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvmWindowsStore\Platform\INavigationMappingProvider.cs">
+      <Link>Platform\INavigationMappingProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvmWindowsStore\Platform\NavigationServiceWindowsStore.cs">
+      <Link>Platform\NavigationServiceWindowsStore.cs</Link>
+    </Compile>
     <Compile Include="..\..\Portable\YoctoMvvm\Commands\AsyncYoctoCommand.cs">
       <Link>Commands\AsyncYoctoCommand.cs</Link>
     </Compile>
@@ -133,6 +139,9 @@
     </Compile>
     <Compile Include="..\..\Portable\YoctoMvvm\Common\Messenger.cs">
       <Link>Common\Messenger.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Common\Parser.cs">
+      <Link>Common\Parser.cs</Link>
     </Compile>
     <Compile Include="..\..\Portable\YoctoMvvm\Common\ViewModel.cs">
       <Link>Common\ViewModel.cs</Link>
