@@ -83,8 +83,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Common\BooleanToVisibilityConverter.cs" />
     <Compile Include="Platform\Dispatcher.cs" />
     <Compile Include="Common\IoCWP.cs" />
+    <Compile Include="Platform\INavigationMappingProvider.cs" />
+    <Compile Include="Platform\NavigationServiceWindowsPhone.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
