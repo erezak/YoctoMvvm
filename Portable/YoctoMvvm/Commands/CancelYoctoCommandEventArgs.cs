@@ -1,5 +1,5 @@
 ﻿
-namespace YoctoMvvm.Common {
+namespace YoctoMvvm.Commands {
     /// <summary>
     /// CancelYoctoCommandEventArgs is raised just
     /// before execution.

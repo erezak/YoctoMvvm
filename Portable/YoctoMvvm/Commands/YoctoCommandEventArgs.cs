@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace YoctoMvvm.Common {
+namespace YoctoMvvm.Commands {
     /// <summary>
     /// YoctoCommandEventArgs used for general command event handlers
     /// </summary>

@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using System.Windows.Input;
+using YoctoMvvm.Common;
 
-namespace YoctoMvvm.Common {
+namespace YoctoMvvm.Commands {
     /// <summary>
     /// An ICommand that triggers an action
     /// </summary>
