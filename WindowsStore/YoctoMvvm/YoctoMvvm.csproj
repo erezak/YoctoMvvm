@@ -104,6 +104,9 @@
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\Portable\YoctoMvvmWindowsStore\Common\BooleanToVisibilityConverter.cs">
+      <Link>Common\BooleanToVisibilityConverter.cs</Link>
+    </Compile>
     <Compile Include="..\..\Portable\YoctoMvvmWindowsStore\Common\IocWindowsStore.cs">
       <Link>Common\IocWindowsStore.cs</Link>
     </Compile>
