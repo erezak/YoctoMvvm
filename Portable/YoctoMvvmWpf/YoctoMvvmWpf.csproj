@@ -30,6 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -44,6 +45,8 @@
   <ItemGroup>
     <Compile Include="Common\IocWpf.cs" />
     <Compile Include="Platform\Dispatcher.cs" />
+    <Compile Include="Platform\INavigationMappingProvider.cs" />
+    <Compile Include="Platform\NavigationServiceWpf.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

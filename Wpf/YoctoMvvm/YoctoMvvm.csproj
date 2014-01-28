@@ -30,6 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -48,6 +49,12 @@
     </Compile>
     <Compile Include="..\..\Portable\YoctoMvvmWpf\Platform\Dispatcher.cs">
       <Link>Platform\Dispatcher.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvmWpf\Platform\INavigationMappingProvider.cs">
+      <Link>Platform\INavigationMappingProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvmWpf\Platform\NavigationServiceWpf.cs">
+      <Link>Platform\NavigationServiceWpf.cs</Link>
     </Compile>
     <Compile Include="..\..\Portable\YoctoMvvm\Commands\AsyncYoctoCommand.cs">
       <Link>Commands\AsyncYoctoCommand.cs</Link>
