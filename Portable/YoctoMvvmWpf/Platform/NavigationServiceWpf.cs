@@ -35,30 +35,36 @@ namespace YoctoMvvmWpf.Platform {
         }
 
         public void Navigate<TViewModel>(object parameterForView = null) {
-            var navParameter = string.Empty;
-            if (_ViewModelToViewMap.ContainsKey(typeof(TViewModel))) {
-                var page = _ViewModelToViewMap[typeof(TViewModel)];
-                _RootFrame.Navigate(page, parameterForView);
+            if (_RootFrame != null) {
+                var navParameter = string.Empty;
+                if (_ViewModelToViewMap.ContainsKey(typeof(TViewModel))) {
+                    var page = _ViewModelToViewMap[typeof(TViewModel)];
+                    _RootFrame.Navigate(new Uri(page, UriKind.Relative), parameterForView);
+                }
             }
         }
 
         public void NavigateReplaceAndKeepCurrent<TNewViewModel, TCurrentViewModel>(object parameterForView = null) {
-            _SavedState = typeof(TCurrentViewModel);
-            Navigate<TNewViewModel>(parameterForView);
-            if (_RootFrame.CanGoBack) {
-                _RootFrame.RemoveBackEntry();
+            if (_RootFrame != null) {
+                _SavedState = typeof(TCurrentViewModel);
+                Navigate<TNewViewModel>(parameterForView);
+                if (_RootFrame.CanGoBack) {
+                    _RootFrame.RemoveBackEntry();
+                }
             }
         }
 
         public void NavigateToSavedState(object parameterForView = null) {
-            if (_SavedState == null) {
-                throw new InvalidOperationException("No saved state exists.");
-            }
-            var method = typeof(NavigationServiceWpf).GetTypeInfo().GetDeclaredMethod("Navigate").MakeGenericMethod(_SavedState);
-            method.Invoke(this, new object[] { parameterForView });
-            _SavedState = null;
-            if (_RootFrame.CanGoBack) {
-                _RootFrame.RemoveBackEntry();
+            if (_RootFrame != null) {
+                if (_SavedState == null) {
+                    throw new InvalidOperationException("No saved state exists.");
+                }
+                var method = typeof(NavigationServiceWpf).GetTypeInfo().GetDeclaredMethod("Navigate").MakeGenericMethod(_SavedState);
+                method.Invoke(this, new object[] { parameterForView });
+                _SavedState = null;
+                if (_RootFrame.CanGoBack) {
+                    _RootFrame.RemoveBackEntry();
+                }
             }
         }
     }
