@@ -43,7 +43,10 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\BooleanNegationToVisibilityConverter.cs" />
+    <Compile Include="Common\BooleanToVisibilityConverter.cs" />
     <Compile Include="Common\IocWpf.cs" />
+    <Compile Include="Platform\CryptoProvider.cs" />
     <Compile Include="Platform\Dispatcher.cs" />
     <Compile Include="Platform\INavigationMappingProvider.cs" />
     <Compile Include="Platform\NavigationServiceWpf.cs" />

@@ -6,13 +6,13 @@ using System.Text;
 
 namespace YoctoMvvm.Courier {
     public sealed class ParcelTypeSubscriptionVoucher : IDisposable {
-        private WeakReference _Hub;
+        private WeakReference _Courier;
         private Type _ParcelType;
 
         /// <summary>
         /// Create a new instance of the ParcelTypeSubscriptionVoucher class.
         /// </summary>
-        public ParcelTypeSubscriptionVoucher(Courier courier, Type parcelType) {
+        public ParcelTypeSubscriptionVoucher(ICourier courier, Type parcelType) {
             if (courier == null) {
                 throw new ArgumentNullException("courier");
             }
@@ -21,18 +21,18 @@ namespace YoctoMvvm.Courier {
                 throw new ArgumentOutOfRangeException("parcelType");
             }
 
-            _Hub = new WeakReference(courier);
+            _Courier = new WeakReference(courier);
             _ParcelType = parcelType;
         }
 
         public void Dispose() {
-            if (_Hub.IsAlive) {
-                var hub = _Hub.Target as Courier;
+            if (_Courier.IsAlive) {
+                var courier = _Courier.Target as ICourier;
 
-                if (hub != null) {
-                    var unsubscribeMethod = typeof(Courier).GetRuntimeMethod("Unsubscribe", new Type[] { typeof(ParcelTypeSubscriptionVoucher) });
+                if (courier != null) {
+                    var unsubscribeMethod = typeof(ICourier).GetRuntimeMethod("Unsubscribe", new Type[] { typeof(ParcelTypeSubscriptionVoucher) });
                     unsubscribeMethod = unsubscribeMethod.MakeGenericMethod(_ParcelType);
-                    unsubscribeMethod.Invoke(hub, new object[] { this });
+                    unsubscribeMethod.Invoke(courier, new object[] { this });
                 }
             }
 

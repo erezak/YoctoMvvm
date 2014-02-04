@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace YoctoMvvm.Courier {
-    public sealed class Courier {
+    public sealed class Courier : ICourier {
 
         #region private and internal use members
         private readonly object _SyncLock = new object();

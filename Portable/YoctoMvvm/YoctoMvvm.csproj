@@ -45,12 +45,14 @@
     <Compile Include="Common\Messenger.cs" />
     <Compile Include="Common\Parser.cs" />
     <Compile Include="Common\ViewModel.cs" />
+    <Compile Include="Courier\ICourier.cs" />
     <Compile Include="Courier\ParcelsRouter.cs" />
     <Compile Include="Courier\Courier.cs" />
     <Compile Include="Courier\Parcel.cs" />
     <Compile Include="Courier\ParcelTypeSubscription.cs" />
     <Compile Include="Courier\ParcelTypeSubscriptionVoucher.cs" />
     <Compile Include="Platform\IAppSettingsProvider.cs" />
+    <Compile Include="Platform\ICryptoProvider.cs" />
     <Compile Include="Platform\IDispatcher.cs" />
     <Compile Include="Platform\INavigationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
