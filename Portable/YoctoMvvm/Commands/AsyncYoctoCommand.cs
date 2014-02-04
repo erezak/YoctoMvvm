@@ -82,6 +82,14 @@ namespace YoctoMvvm.Commands {
         }
 
         public async void Execute(object parameter) {
+            // Make sure the view bidning was done with a correct parameter type.
+            if (parameter != null && parameter is TParameter == false) {
+                Type passedType;
+                passedType = parameter.GetType();
+                throw new InvalidOperationException(string.Format("The command expected a paramter of {0}, but received {1}",
+                                                        typeof(TParameter).Name,
+                                                        passedType.Name));
+            }
             if (CanExecute(parameter)) {
                 await ExecuteAsync((TParameter)parameter);
             }

@@ -91,6 +91,27 @@ namespace YoctoMvvm.Commands {
         }
 
         /// <summary>
+        /// Manually set CanExecute to false
+        /// </summary>
+
+        public void Disable() {
+            _CanExecuteMethod = () => {
+                return false;
+            };
+            RaiseCanExecuteChanged();
+        }
+        /// <summary>
+        /// Manually set CanExecute to true
+        /// </summary>
+        /// <param name="param">Parameter to the function, if needed (ignored at this time)</param>
+        public void Enable() {
+            _CanExecuteMethod = () => {
+                return true;
+            };
+            RaiseCanExecuteChanged();
+        }
+
+        /// <summary>
         /// The interal action
         /// </summary>
         protected Action<TParameter> _InternalAction;
@@ -98,7 +119,7 @@ namespace YoctoMvvm.Commands {
         /// <summary>
         /// Method determining if the command can execute
         /// </summary>
-        private readonly Func<bool> _CanExecuteMethod;
+        private Func<bool> _CanExecuteMethod;
 
 
         #region ICommand Members
