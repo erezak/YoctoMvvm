@@ -86,6 +86,9 @@
     <Compile Include="..\..\Portable\YoctoMvvmWindowsPhone\Common\IoCWP.cs">
       <Link>Common\IoCWP.cs</Link>
     </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvmWindowsPhone\Platform\CryptoProvider.cs">
+      <Link>Platform\CryptoProvider.cs</Link>
+    </Compile>
     <Compile Include="..\..\Portable\YoctoMvvmWindowsPhone\Platform\Dispatcher.cs">
       <Link>Platform\Dispatcher.cs</Link>
     </Compile>
@@ -113,9 +116,6 @@
     <Compile Include="..\..\Portable\YoctoMvvm\Common\IoC.cs">
       <Link>Common\IoC.cs</Link>
     </Compile>
-    <Compile Include="..\..\Portable\YoctoMvvm\Common\Messenger.cs">
-      <Link>Common\Messenger.cs</Link>
-    </Compile>
     <Compile Include="..\..\Portable\YoctoMvvm\Common\Parser.cs">
       <Link>Common\Parser.cs</Link>
     </Compile>
@@ -124,6 +124,9 @@
     </Compile>
     <Compile Include="..\..\Portable\YoctoMvvm\Courier\Courier.cs">
       <Link>Courier\Courier.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Courier\ICourier.cs">
+      <Link>Courier\ICourier.cs</Link>
     </Compile>
     <Compile Include="..\..\Portable\YoctoMvvm\Courier\Parcel.cs">
       <Link>Courier\Parcel.cs</Link>
@@ -139,6 +142,9 @@
     </Compile>
     <Compile Include="..\..\Portable\YoctoMvvm\Platform\IAppSettingsProvider.cs">
       <Link>Platform\IAppSettingsProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Portable\YoctoMvvm\Platform\ICryptoProvider.cs">
+      <Link>Platform\ICryptoProvider.cs</Link>
     </Compile>
     <Compile Include="..\..\Portable\YoctoMvvm\Platform\IDispatcher.cs">
       <Link>Platform\IDispatcher.cs</Link>

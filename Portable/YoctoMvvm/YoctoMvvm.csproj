@@ -42,7 +42,6 @@
     <Compile Include="Common\Bindable.cs" />
     <Compile Include="Commands\AsyncYoctoCommand.cs" />
     <Compile Include="Common\IoC.cs" />
-    <Compile Include="Common\Messenger.cs" />
     <Compile Include="Common\Parser.cs" />
     <Compile Include="Common\ViewModel.cs" />
     <Compile Include="Courier\ICourier.cs" />
